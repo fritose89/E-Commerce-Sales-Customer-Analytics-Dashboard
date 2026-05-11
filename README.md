@@ -19,3 +19,16 @@ In this project I am cleaning messy retail e-commerce data and using this data t
 
 ## Dataset
 UCI Online Retail dataset
+
+## Status Updates
+### 5/11 
+- Used Excel to change file format of data from .xlsv to .csv for importing into SSMS
+- When importing the data into SSMS I set the data types to thier most appropriate types as follows:
+InvoiceNo - nvarchar(50)
+StockCode - nvarchar(50)
+Description - nvarchar(50)
+Quantity - int
+InvoiceDate - datetime2(7)
+UnitPrice - float
+CustomerID - nvarchar(50)
+Country - nvarchar(50)
