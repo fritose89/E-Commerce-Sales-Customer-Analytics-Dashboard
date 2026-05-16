@@ -46,6 +46,7 @@ UCI Online Retail dataset
 - Convert Quantity from NVARCHAR to INT
 - Convert InvoiceDate from NVARCHAR to DATETIME2
 - Convert UnitPrice from NVARCHAR TO DECIMAL(12, 2)
+- Revenue row added by multiplying Quantity and UnitPrice
 - Rows where the InvoiceNo begins with C are marked as cancelled
 - Cancelled invoices and rows will not be included in the revenue calculation
 - UnitPrices that are zero or less will be excluded from the revenue and sales analysis
