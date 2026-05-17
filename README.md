@@ -48,10 +48,22 @@ UCI Online Retail dataset
 - Convert UnitPrice from NVARCHAR TO DECIMAL(12, 2)
 - Revenue row added by multiplying Quantity and UnitPrice
 - Rows where the InvoiceNo begins with C are marked as cancelled
-- Cancelled invoices and rows will not be included in the revenue calculation
+- Cancelled invoices and rows will not be included in any time based or total revenue calculations
+- Cancelled invoices will be analyzed seperately
 - UnitPrices that are zero or less will be excluded from the revenue and sales analysis
 - Rows that have negative Quantities that are not cancellations will be analyzed separately
 - Missing customer id rows will be analyzed separately from customer-level analysis
 - Missing customer id rows will be included in overall analysis
 
-
+### 5/16
+- Moved template of cleaned views to GitHub
+- Refined the cleaning query and added greater detail to the comments
+- Added new cleaning query and view creation queries to GitHub
+- Created views based on the rules above each view is listed as follows:
+  - sales_clean: overall clean view with proper data type conversion, removal of nulls, the addition of the flags, and adding a revenue calculation row
+  - sales_overall: sales_clean view with additonal filtering to remove cancelled sales, negative quantity sales, and negative unit prices
+  - cancelled_sales: sales_clean view with cancelled flag set to true
+  - customer_level_sales: sales_clean view with no missing customer IDs
+  - missingID_sales: sales_clean view with missing customer IDs
+  - negative_quant_no_cancel: sales_clean view with that specific flag set
+- Removed clean template from GitHub and replaced with refined cleaning query
