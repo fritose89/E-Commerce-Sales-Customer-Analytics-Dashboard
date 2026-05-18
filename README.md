@@ -6,7 +6,6 @@ In this project I am cleaning messy retail e-commerce data and using this data t
 ## Tools
 - SQL Server (SSMS 22)
 - Power BI
-- Python (pandas)
 - Excel
 - GitHub
 
