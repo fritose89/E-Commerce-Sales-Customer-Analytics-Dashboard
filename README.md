@@ -71,5 +71,5 @@ UCI Online Retail dataset
 ### 5/17
 - Created first draft of business analysis queries based on rules and business questions
 - Initial drafts include filtering by country, product, cancelled orders, and customer level sales
-- I am stil deciding exactly what should be represent by a simple query and what should be represented by a view
-- The Overall revenue trend query is almost in final draft and includes average revenue per order columns as well
+- I am still deciding exactly what should be represent by a simple query and what should be represented by a view
+- The overall revenue trend query is almost in final draft and includes average revenue per order columns as well
