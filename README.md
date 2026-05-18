@@ -1,4 +1,4 @@
-# E-Commerce-Sales-Customer-Analytics-Dashboard
+# E-Commerce-Sales-Analytics-Dashboard
 
 ## Project Overview
 In this project I am cleaning messy retail e-commerce data and using this data to identify trends and to give relevant business insight. This project is very similar to my work done as a Business Data Analyst for Nawlins Vape LLC.
