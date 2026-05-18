@@ -46,10 +46,10 @@ UCI Online Retail dataset
 - Convert Quantity from NVARCHAR to INT
 - Convert InvoiceDate from NVARCHAR to DATETIME2
 - Convert UnitPrice from NVARCHAR TO DECIMAL(12, 2)
-- Revenue row added by multiplying Quantity and UnitPrice
+- Revenue column added by multiplying Quantity and UnitPrice
 - Rows where the InvoiceNo begins with C are marked as cancelled
 - Cancelled invoices and rows will not be included in any time based or total revenue calculations
-- Cancelled invoices will be analyzed seperately
+- Cancelled invoices will be analyzed separately
 - UnitPrices that are zero or less will be excluded from the revenue and sales analysis
 - Rows that have negative Quantities that are not cancellations will be analyzed separately
 - Missing customer id rows will be analyzed separately from customer-level analysis
@@ -61,9 +61,15 @@ UCI Online Retail dataset
 - Added new cleaning query and view creation queries to GitHub
 - Created views based on the rules above each view is listed as follows:
   - sales_clean: overall clean view with proper data type conversion, removal of nulls, the addition of the flags, and adding a revenue calculation row
-  - sales_overall: sales_clean view with additonal filtering to remove cancelled sales, negative quantity sales, and negative unit prices
+  - sales_overall: sales_clean view with additional filtering to remove cancelled sales, negative quantity sales, and negative unit prices
   - cancelled_sales: sales_clean view with cancelled flag set to true
   - customer_level_sales: sales_clean view with no missing customer IDs
   - missingID_sales: sales_clean view with missing customer IDs
   - negative_quant_no_cancel: sales_clean view with that specific flag set
 - Removed clean template from GitHub and replaced with refined cleaning query
+
+### 5/17
+- Created first draft of business analysis queries based on rules and business questions
+- Initial drafts include filtering by country, product, cancelled orders, and customer level sales
+- I am stil deciding exactly what should be represent by a simple query and what should be represented by a view
+- The Overall revenue trend query is almost in final draft and includes average revenue per order columns as well
