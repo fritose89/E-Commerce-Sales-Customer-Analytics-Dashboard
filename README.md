@@ -73,3 +73,16 @@ UCI Online Retail dataset
 - Initial drafts include filtering by country, product, cancelled orders, and customer level sales
 - I am still deciding exactly what should be represent by a simple query and what should be represented by a view
 - The overall revenue trend query is almost in final draft and includes average revenue per order columns as well
+
+### 5/18
+- Began refinement of summarized business metrics in sql04 file
+- Removed all GROUP BY statements in order to turn queries into resuable views
+- I learned that views are used to encapsualte resuable, pre-filtered datasets that can then be used to do a more detailed analysis
+- All previous queries are now turned into the follow summary views:
+  - monthly_sales_summary: breaks down sales and other metrics by month
+  - geographic_sales_summary: metrics broken down by country
+  - product_sales_summary: metrics on product performance
+  - customer_level_sales_summary: individualized customer sales metrics
+  - cancelled_orders_summary: condensed metrics on just cancelled order processed separately
+- Created a finalized version of the sql04 file to show the progress made between the first and final draft
+- Renamed the sql04 draft and finalized file to show they are data summaries and not actual analysis queries
